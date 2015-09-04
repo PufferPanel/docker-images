@@ -6,17 +6,9 @@
 # Author: Dane Everitt
 # ##
 
-FROM        buildpack-deps:jessie-scm
+FROM        java:openjdk-8
 
 MAINTAINER  Dane Everitt <dane@daneeveritt.com>
-
-ENV         DEBIAN_FRONTEND noninteractive
-ENV         LANG C.UTF-8
-
-RUN         apt-get -y update
-RUN         apt-get -y install default-jre \
-                curl \
-                openssh-server
 
 EXPOSE      25565
 
