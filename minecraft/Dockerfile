@@ -20,4 +20,4 @@ EXPOSE      25565
 
 WORKDIR     /data
 
-CMD         ["/bin/sh"]
+CMD         ["/bin/bash"]
