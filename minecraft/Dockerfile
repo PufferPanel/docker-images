@@ -10,11 +10,11 @@ FROM        java:openjdk-8
 
 MAINTAINER  Dane Everitt <dane@daneeveritt.com>
 
-RUN         adduser --disabled-password --gecos '' scales
-RUN         adduser scales sudo
-RUN         echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+# RUN         adduser --disabled-password --gecos '' scales
+# RUN         adduser scales sudo
+# RUN         echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
-USER        scales
+# USER        scales
 
 EXPOSE      25565
 
