@@ -10,7 +10,11 @@ FROM        java:openjdk-8
 
 MAINTAINER  Dane Everitt <dane@daneeveritt.com>
 
+RUN         groupadd -r scales && useradd -r -g scales scales
+
 EXPOSE      25565
+
+USER        scales
 
 WORKDIR     /data
 
