@@ -10,12 +10,14 @@ FROM        java:openjdk-8
 
 MAINTAINER  Dane Everitt <dane@daneeveritt.com>
 
-RUN         groupadd -r scales && useradd -r -g scales scales
-
-EXPOSE      25565
+RUN         adduser --disabled-password --gecos '' scales
+RUN         adduser scales sudo
+RUN         echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 USER        scales
 
+EXPOSE      25565
+
 WORKDIR     /data
 
-CMD         ["bash"]
+CMD         ["/bin/sh"]
