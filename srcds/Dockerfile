@@ -10,9 +10,12 @@ FROM        ubuntu:14.04
 
 MAINTAINER  puffrfish <puffrfish@puffrfish.com>
 
-ENV DEBIAN_FRONTEND noninteractive
+ENV         DEBIAN_FRONTEND noninteractive
 
-RUN         apt-get update && apt-get install -y lib32gcc1 lib32tinfo5
+RUN         apt-get update && apt-get install -y lib32gcc1 lib32tinfo5 curl tar
+RUN         mkdir -p /data/steamcmd && cd /data/steamcmd
+RUN         curl -O https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
+RUN         tar -xzvf steamcmd_linux.tar.gz && rm -rf steamcmd_linux.tar.gz
 
 EXPOSE      27015
 
