@@ -14,10 +14,13 @@ MAINTAINER  Dane Everitt <dane@daneeveritt.com>
 # RUN         adduser scales sudo
 # RUN         echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
-# USER        scales
+RUN         useradd -m -d /home/container container
+
+USER        container
+ENV         HOME /home/container
 
 EXPOSE      25565
 
-WORKDIR     /data
+WORKDIR     /home/container
 
 CMD         ["/bin/bash"]
