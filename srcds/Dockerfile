@@ -20,17 +20,7 @@ RUN         useradd -m -d /home/container container
 USER        container
 ENV         HOME /home/container
 
-# Not used since we are attaching an external volume to the container.
-# WORKDIR     /home/steam
-#
-# RUN         mkdir steamcmd
-#
-# WORKDIR     /home/steam/steamcmd
-#
-# RUN         curl -O https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
-# RUN         tar -xzvf steamcmd_linux.tar.gz && rm -rf steamcmd_linux.tar.gz
-
-WORKDIR     /home/steam
+WORKDIR     /home/container
 
 EXPOSE      27015
 EXPOSE      27020
