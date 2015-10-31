@@ -10,10 +10,6 @@ FROM        java:openjdk-8
 
 MAINTAINER  Dane Everitt <dane@daneeveritt.com>
 
-# RUN         adduser --disabled-password --gecos '' scales
-# RUN         adduser scales sudo
-# RUN         echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
-
 RUN         useradd -m -d /home/container container
 
 USER        container
