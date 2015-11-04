@@ -22,7 +22,4 @@ ENV         HOME /home/container
 
 WORKDIR     /home/container
 
-EXPOSE      27015
-EXPOSE      27020
-
 CMD         ["/bin/bash"]

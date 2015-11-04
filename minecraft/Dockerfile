@@ -15,8 +15,6 @@ RUN         useradd -m -d /home/container container
 USER        container
 ENV         HOME /home/container
 
-EXPOSE      25565
-
 WORKDIR     /home/container
 
 CMD         ["/bin/bash"]
