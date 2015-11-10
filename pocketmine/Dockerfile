@@ -14,7 +14,7 @@ ENV         DEBIAN_FRONTEND noninteractive
 
 WORKDIR     /data
 
-RUN         apt-get update && apt-get install -y perl gcc g++ make automake libtool autoconf m4 gcc-multilib
+RUN         apt-get update && apt-get install -y curl bash perl gcc g++ make automake libtool autoconf m4 gcc-multilib
 RUN         useradd -m -d /home/container container
 
 USER        container
