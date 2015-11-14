@@ -1,5 +1,5 @@
 # ##
-# Docker: SRCDS
+# Docker: Pocketmine
 #
 # Builds a docker image for running a steamcmd based server on PufferPanel.
 #
