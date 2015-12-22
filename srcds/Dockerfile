@@ -14,7 +14,7 @@ ENV         DEBIAN_FRONTEND noninteractive
 
 WORKDIR     /data
 
-RUN         apt-get update && apt-get install -y lib32gcc1 lib32tinfo5 lib32z1 curl tar
+RUN         apt-get update && apt-get install -y lib32gcc1 lib32tinfo5 lib32z1 curl tar lib32stdc++6
 RUN         useradd -m -d /home/container container
 
 USER        container
